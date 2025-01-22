@@ -3675,6 +3675,7 @@ figure {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .primary-button.w--current {

@@ -133,22 +133,22 @@
     </section>
     <section class="section main-work">
       <div class="container" >
-        <div class="catagory-box-wrap"  style="margin-bottom: 18px;" data-w-id="677db48f-f422-9b84-feb7-af5a84af4554" >
+        <div class="catagory-box-wrap"  style="margin-bottom: 18px;"   >
           <div class="catagory-collection-wrap w-dyn-list">
-            <div role="list" class="catagory-collection-list w-dyn-items">
-              <div role="listitem" class="catagory-collection-item w-dyn-item">
-                <a data-category="all" class="primary-button w-button w--current">All</a>
+            <div role="list" class="catagory-collection-list  ">
+              <div role="listitem" class="catagory-collection-item  ">
+                <a data-category="all" class="primary-button  ">All</a>
               </div>
-                <div role="listitem" class="catagory-collection-item w-dyn-item">
-                  <a data-category="digital-marketing" class="primary-button w-button">Digital Marketing</a>
+                <div role="listitem" class="catagory-collection-item  ">
+                  <a data-category="digital-marketing" class="primary-button  ">Digital Marketing</a>
                 </div>
                
-                <div role="listitem" class="catagory-collection-item w-dyn-item">
-                  <a data-category="website-development" class="primary-button w-button">Website Development</a>
+                <div role="listitem" class="catagory-collection-item  ">
+                  <a data-category="website-development" class="primary-button  ">Website Development</a>
                 </div>
                
-               <div role="listitem" class="catagory-collection-item w-dyn-item">
-                 <a data-category="branding" class="primary-button w-button">Branding</a>
+               <div role="listitem" class="catagory-collection-item  ">
+                 <a data-category="branding" class="primary-button  ">Branding</a>
                 </div>
               
                
@@ -636,13 +636,19 @@
   <script src="../cdn.prod.website-files.com/6716051c7e279a14d3641f31/js/webflow.963a62bc3.js"
     type="text/javascript"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".primary-button");
   const cards = document.querySelectorAll(".w-dyn-item");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const category = button.getAttribute("data-category");
+
+      // Remove the w--current class from all buttons
+      buttons.forEach((btn) => btn.classList.remove("w--current"));
+
+      // Add the w--current class to the clicked button
+      button.classList.add("w--current");
 
       // Filter cards
       cards.forEach((card) => {
@@ -656,6 +662,7 @@
     });
   });
 });
+
 
     </script>
 </body>
