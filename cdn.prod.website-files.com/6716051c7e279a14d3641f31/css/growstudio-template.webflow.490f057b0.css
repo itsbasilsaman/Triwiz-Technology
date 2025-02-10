@@ -3751,7 +3751,7 @@ figure {
 }
 
 .primary-button.w--current {
-  background-image: linear-gradient(93deg, #f4e4af, #83d2ff);
+  background-image: linear-gradient(90deg, #b78eff, #6119dc);
   padding: 10px 25px;
 }
 
@@ -5704,7 +5704,7 @@ figure {
 }
 
 .price-tab-link.w--current {
-  background-image: linear-gradient(83deg, #f4e4af, #83d2ff);
+  background-image: linear-gradient(90deg, #b78eff, #6119dc);
 }
 
 .price-tab-bg {
