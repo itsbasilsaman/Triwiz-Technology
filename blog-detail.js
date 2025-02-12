@@ -11,9 +11,8 @@ async function fetchBlogDetails() {
       const data = await response.json();
       console.log("Blog data: ", data);
 
- 
       if (document.getElementById("headTitle")) {
-        document.getElementById("headTitle").innerText = data.headTitle || "Best Digital Marketing Company In Saudi Arabia | SEO Company";
+        document.getElementById("headTitle").innerText = data.headTitle || "Best Digital Marketing Company In Saudi Arabia | SEO Companys";
       }
       if (document.getElementById("metaTitle")) {
         document.getElementById("metaTitle").textContent = data.title || "Default Meta Title";
@@ -27,7 +26,17 @@ async function fetchBlogDetails() {
       if (document.getElementById("blogDescription")) {
         document.getElementById("blogDescription").innerHTML = data.formattedDescription || "No description available.";
       }
-    } else {
+
+       // Add Canonical Link Dynamically
+       let canonical = document.querySelector("link[rel='canonical']");
+       if (!canonical) {
+         canonical = document.createElement("link");
+         canonical.setAttribute("rel", "canonical");
+         document.head.appendChild(canonical);
+       }
+       canonical.setAttribute("href", `https://www.triwiztechnologies.com/blog-detail.html?slug=${slug}`);
+     }  
+     else {
       console.error("Error fetching blog:", response.statusText);
       document.body.innerHTML = "<p>Blog post not found. Please try again later.</p>";
     }
