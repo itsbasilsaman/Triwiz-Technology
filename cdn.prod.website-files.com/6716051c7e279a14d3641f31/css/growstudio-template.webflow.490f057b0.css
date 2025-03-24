@@ -6672,6 +6672,67 @@ figure {
   margin-bottom: 24px;
 }
 
+.custom-language-switch {
+  position: relative;
+  width: 85px;
+  height: 47px;
+  font-family: DM Sans, sans-serif;
+}
+
+#custom-language-toggle {
+  display: none;
+}
+
+.custom-switch {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #B084FC;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 6px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out;
+}
+
+.custom-slider {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #6F2CE1;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  transition: left 0.3s ease-in-out;
+}
+
+
+
+.custom-label-en, .custom-label-ar {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0px 5px;
+  color: white;
+  z-index: 1;
+  font-family: DM Sans, sans-serif;
+}
+
+#custom-language-toggle:checked + .custom-switch {
+  background:#B084FC;
+}
+
+#custom-language-toggle:checked + .custom-switch .custom-slider {
+  left: 38px;
+}
+
+
 .delab-inner-icon-box {
   width: 24px;
   min-width: 24px;
@@ -6690,6 +6751,7 @@ figure {
 .product-name {
   font-weight: 400;
 }
+
 
 @media screen and (max-width: 1300px) {
   .pre-build-img.web-image {
