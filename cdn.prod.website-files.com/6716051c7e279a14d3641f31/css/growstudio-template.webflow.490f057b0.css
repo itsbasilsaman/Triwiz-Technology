@@ -6130,6 +6130,7 @@ figure {
   background-color: var(--filed-color);
   border-radius: 100%;
   position: absolute;
+  color: white;
 }
 
 .work-process h4 {
