@@ -4,7 +4,7 @@ const slug = urlParams.get("slug");
 
 async function fetchBlogDetails() {
   try {
-    const response = await fetch(`https://saleelvt-cyberceed-back-end.onrender.com/api/get_blog_by_slug?slug=${slug}`);
+    const response = await fetch(`https://back-end-bbk-webs.onrender.com/api/get_blog_by_slug?slug=${slug}`);
     console.log("Response received: ", response);
     
     if (response.ok) {
